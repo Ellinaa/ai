@@ -1,3 +1,4 @@
+# micrograd/engine.py
 import numpy as np
 from numpy.linalg import norm
 from micrograd.engine import Value
@@ -21,7 +22,7 @@ def gradientDescendent(f, p0, h=0.01, max_loops=100000, dump_period=1000):
     print('{:05d}:f(p)={:.3f} p={:s} gp={:s} glen={:.5f}'.format(i, fp.data, str([v.data for v in p]), str(gp), glen))
     return [v.data for v in p]
 
-# 範例使用和測試案例
+# 測試案例
 import matplotlib.pyplot as plt
 
 # 數據集
